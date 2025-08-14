@@ -26,9 +26,9 @@ def love():
             msg = random.choice(messages)
             for word in msg.split():
                 yield word + " "
-                time.sleep(0.3)  # typing speed
-            yield "\n"  # new line after message
-            time.sleep(0.5)  # small pause before next line
+                time.sleep(0.05)  # much faster typing
+            yield "\n"
+            time.sleep(0.1)  # small gap between messages
     return Response(generate(), mimetype='text/plain')
 
 if __name__ == "__main__":
